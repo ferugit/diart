@@ -8,7 +8,7 @@ import torch
 from diart import utils
 from einops import rearrange
 from rx.subject import Subject
-from torchaudio.io import StreamReader
+#from torchaudio.io import StreamReader
 from websocket_server import WebsocketServer
 
 from .audio import FilePath, AudioLoader
@@ -250,7 +250,7 @@ class WebSocketAudioSource(AudioSource):
         if len(message) > 0:
             self.server.send_message(self.client, message)
 
-
+"""
 class TorchStreamAudioSource(AudioSource):
     def __init__(
         self,
@@ -287,3 +287,4 @@ class TorchStreamAudioSource(AudioSource):
 
     def close(self):
         self.is_closed = True
+"""
